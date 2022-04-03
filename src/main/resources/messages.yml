@@ -1,0 +1,31 @@
+
+# Webserver JSON Responses
+webserver_error_required_either_or_check: "Required Parameter ${PARAMETER} or ${OR_PARAMETER} is not set"
+webserver_error_required_check: "Required Parameter ${PARAMETER} is not set"
+webserver_error_perm_check: "You do not have the necessary Permission ${PERMISSION}"
+
+# Feature Global
+feature_player_cannot_be_found: "Player known as ${PLAYER} cannot be found"
+# Features
+feature_burn_player: "Player known as ${PLAYER} has been set on fire"
+
+
+
+
+
+# System messages [DEVELOPER ONLY]
+webserver_unknown_error_handler_check: "An unknown error has occurred while checking a Webserver request"
+# Webserver
+webserver_listening: "Webserver is listening on ${HOSTNAME}:${PORT}"
+webserver_cannot_start: "Webserver cannot start on ${HOSTNAME}:${PORT}"
+webserver_context_not_found: "Webserver endpoint ${CONTEXT} cannot be found in Config.yml"
+# Checks
+
+# Messages
+message_not_found: "Message ${MESSAGE} cannot be found in Messages.yml."
+# Config
+config_var_not_found: "Config setting ${PATH} not found. Default value used: ${DEFAULT}"
+
+# Features
+feature_set_enabled: "Feature ${FEATURE_CLASS} enabled"
+feature_set_disabled: "Feature ${FEATURE_CLASS} disabled"

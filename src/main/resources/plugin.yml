@@ -1,0 +1,8 @@
+name: "EightyEighty"
+version: '${project.version}'
+main: "com.sevensixfour.ee.EightyEighty"
+description: "Hello world"
+website: TBC
+api-version: 1.18
+prefix: EE
+authors: [ 0764 ]

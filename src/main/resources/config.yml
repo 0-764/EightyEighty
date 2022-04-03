@@ -1,0 +1,74 @@
+############################################################
+# +------------------------------------------------------+ #
+# |                       Notes                          | #
+# +------------------------------------------------------+ #
+############################################################
+# This is the config file for EightyEighty.
+# This config was generated for version 0.0.1.
+
+# If you require help please contact us at:
+
+############################################################
+# +------------------------------------------------------+ #
+# |                     EightyEighty                     | #
+# +------------------------------------------------------+ #
+############################################################
+
+
+############################################################
+# +------------------------------------------------------+ #
+# |                       Webserver                      | #
+# +------------------------------------------------------+ #
+############################################################
+# The EightyEighty plugin operates a Webserver by default at port 8080
+# Webserver configuration:
+
+webserver:
+
+  hostname: "127.0.0.1"
+  port: 8080
+
+
+############################################################
+# +------------------------------------------------------+ #
+# |                       Features                       | #
+# +------------------------------------------------------+ #
+############################################################
+# This section declares the functionality of the plugin and what is enabled
+# If you don't want to disable anything by default then ignore this section
+
+features:
+  burn_player:
+    enabled: true
+    endpoint: "/player/burn/"
+  kill_player:
+    enabled: true
+    endpoint: "/player/kill/"
+
+
+
+############################################################
+# +------------------------------------------------------+ #
+# |                         Users                        | #
+# +------------------------------------------------------+ #
+############################################################
+# Change the settings of the default user to access the webserver
+
+# List of users authenticated to use the Webserver:
+
+users:
+  # Default user
+  1:
+    user: "admin"
+    password: "admin"
+    # Beware: admin enables all permissions
+    admin: true
+    # Allowed Permissions
+    permissions:
+      - player.action.burn
+      - player.action.kill
+
+
+
+# Only enable
+DEBUG_MODE: true
