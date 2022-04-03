@@ -1,5 +1,8 @@
 <h2>About the project</h2>
 <p>
+<b>Plugin is a work in progress.</b>
+</p>
+<p>
 EightyEighty is a plugin created by 0764 that enables devs to interface with their Minecraft server via an HTTP(S) interface on Port 8080.
 </p>
 <p>
