@@ -39,6 +39,7 @@ public class EightyEighty extends JavaPlugin {
         // Messages are sent to the Server Owner through the console and to end users through the Webserver API
         // These messages can be changed through the Messages.yml file
         MessageHelper.loadMessagesFile(this);
+
         // Add standard prefixes which will be used throughout the EightyEighty plugin to the MessagesHelper
         MessageHelper.addPREFIX("PLUGIN_NAME", this.getName());
         MessageHelper.addPREFIX("PLUGIN_DESC", this.getDescription().getDescription());
@@ -67,10 +68,12 @@ public class EightyEighty extends JavaPlugin {
                 put("PORT", String.format("%s", webserver.getPort()));
             }
         };
+
         // Attempt to Create & Start the Webserver
         try {
             // Load permissions
             this.webserver.loadPermissionUsers();
+
             // Create & start webserver
             this.webserver.createAndStartWebServer();
             LoggerHelper.success(MessageHelper.getMessage("webserver_listening", msgVariables));
@@ -78,10 +81,13 @@ public class EightyEighty extends JavaPlugin {
             // Webserver cannot be created/started
             // This is acknowledged as an error and alerted to the Console
             LoggerHelper.error(MessageHelper.getMessage("webserver_cannot_start", msgVariables));
+
             // Disable plugin as fundamental function is not working aka webserver
             this.getPluginLoader().disablePlugin(this);
         }
+
         this.features();
+
         // Log startup
         LoggerHelper.raw(StartupMsg.STARTUP);
     }
